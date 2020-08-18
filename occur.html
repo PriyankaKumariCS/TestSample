@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<script>
+	function findOccr()
+	{
+		
+		//var binaryArray = [0,0,1,1,0,0,0,1,0,0,1,1,1,0];
+		var binaryArray = [1,0,0,0,0,1,0,0,0,1];
+		var arrayLength = binaryArray.length;
+		var count = 0;
+		var result = 0;
+		
+		for(var i = 0; i < arrayLength; i++) 
+        { 
+              
+            // Reset count when 0 is found 
+            if (binaryArray[i] == false) 
+                count = 0; 
+      
+            // If 1 is found, increment count 
+            // and update result if count becomes 
+            // more. 
+            else
+            { 
+                count++;//increase count 
+				
+                result = Math.max(result, count);
+            } 
+        }
+			alert("Max occurance = "+result);
+	}
+</script></head>
+	<body>
+		<label>click</label>
+		<input type="button" onclick="findOccr()" value="Find">
+	</body>
+</html>
+
